@@ -53,10 +53,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  W       │  L       │  Y       │  P       │  B       │   │  Z       │  F       │  O       │  U       │  '       │
-             &kp W       &kp L      &kp Y     &kp P     &kp B          &kp Z     &kp F     &kp O     &kp U     &kp SE_QUOT
+             &kp W      &kp L      &kp Y     &kp P       &kp B          &kp Z      &kp F      &ht SE_OE O &kp U      &kp SE_QUOT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  C       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ A        │
-             &kp C      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I     &kp A
+             &kp C      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &ht SE_AE E &kp I    &ht SE_AO A
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Q       │  J       │  V       │  D       │  K       │   │  X       │  H       │ /        │ ,        │ .        │
              &kp Q      &kp J      &kp V      &kp D      &kp K          &kp X      &kp H     &kp SE_SLSH &kp COMMA &kp DOT
