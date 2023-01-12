@@ -38,8 +38,8 @@
 #define SE_I    I    // I
 #define SE_O    O    // O
 #define SE_P    P    // P
-#define SE_AO LBRC // Å
-#define SE_DIAE RBRC // ¨ (dead)
+#define SE_AO   LBKT // Å
+#define SE_DIAE RBKT // ¨ (dead)
 // Row 3
 #define SE_A    A    // A
 #define SE_S    S    // S
