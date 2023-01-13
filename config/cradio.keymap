@@ -100,8 +100,8 @@
         //│ <        │ [        │  {       │  (       │ ~        │   │  ^       │  )       │  }       │  ]       │  >       │
             &kp SE_LABK &kp SE_LBRC &kp SE_LCBR &kp SE_LPRN &kp SE_TILD &kp SE_CIRC &kp SE_RPRN &kp SE_RCBR &kp SE_RBRC &kp SE_RABK
         //├──────────┼──────────┼──────────┼──────────┼──── ─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ +        │  -       │  *       │  =       │ :        │   │  ;       │  META    │  ALT     │  CTRL    │  SHIFT   │
-            &kp SE_PLUS &kp SE_MINS &kp SE_ASTR &kp SE_EQL &kp SE_COLN  &kp SE_SCLN &kp LGUI &kp LALT   &kp LCTRL  &kp LSHIFT                                                                                                            
+        //│ +        │  -       │  *       │  =       │ ;        │   │  :       │  META    │  ALT     │  CTRL    │  SHIFT   │
+            &kp SE_PLUS &kp SE_MINS &kp SE_ASTR &kp SE_EQL &kp SE_SCLN  &kp SE_COLN &kp LGUI &kp LALT   &kp LCTRL  &kp LSHIFT                                                                                                            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ |        │ _        │ @        │ `        │ $        │   │ #        │  \       │  &       │  ?       │ !        │
             &kp SE_PIPE &kp SE_UNDS &kp SE_AT &kp SE_GRV &kp SE_DLR    &kp SE_HASH &kp SE_BSLS &kp SE_AMPR &kp SE_QUES &kp SE_EXLM
@@ -114,14 +114,14 @@
         number_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-            &reset     &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans      &reset
+        //│ 1        │ 2        │ 3        │ 4        │ 5        │   │ 6        │ 7        │ 8        │ 9        │ 0        │
+            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+        //│ SHIFT    │ CTRL     │ ALT      │ META     │ F11      │   │ F12      │ META     │ ALT      │ CTRL     │ SHIFT    │
+            &kp LSHIFT &kp LCTRL  &kp LALT   &kp LGUI   &kp F11        &kp F12    &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHIFT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+        //│ F1       │ F2       │ F3       │ F4       │ F5       │   │ F6       │ F7       │ F8       │ F9       │ F10      │
+            &kp F1     &kp F2     &kp F3    &kp F4      &kp F5         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
