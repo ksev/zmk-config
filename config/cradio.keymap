@@ -73,14 +73,14 @@
         nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ TAB      │ ALT TAB  │          │          │ VOL UP   │   │ PG UP    │ HOME     │ UP       │ END      │ DEL      │
-            &kp TAB    &kp RA(TAB) &none     &none     &kp C_VOL_UP   &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp DEL
+        //│ TAB      │ ALT TAB  │          │ FlyP     │ CUT      │   │ PG UP    │ HOME     │ UP       │ END      │ DEL      │
+            &kp TAB    &kp LA(TAB) &none     &kp LC(SPACE) &kp LC(X)   &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ SHIFT    │ CTRL     │ ALT      │ META     │ VOL DWN  │   │ PG DWN   │ LEFT     │ DOWN     │ RIGHT    │          │
-            &kp LSHIFT &kp LCTRL  &kp LALT   &kp LGUI   &kp C_VOL_DN   &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &none
+        //│ SHIFT    │ CTRL     │ ALT      │ META     │ PASTE    │   │ PG DWN   │ LEFT     │ DOWN     │ RIGHT    │          │
+            &kp LSHIFT &kp LCTRL  &kp LALT   &kp LGUI   &kp LC(V)      &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │          │ Prev     │ P/Paus   │ Next     │   │          │          │          │          │          │
-           &caps_word  &none      &kp C_PREV &kp C_PP   &kp C_NEXT     &none      &none      &none      &none     &none
+        //│ CAPS     │          │          │          │ Copy     │   │          │          │          │          │          │
+           &caps_word  &none      &none      &none      &kp LC(C)     &none      &none      &none      &none     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
