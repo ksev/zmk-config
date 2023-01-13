@@ -31,7 +31,7 @@
             label = "hold_tap_layer";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             global-quick-tap;
@@ -61,7 +61,7 @@
         //│  Q       │  J       │  V       │  D       │  K       │   │  X       │  H       │ /        │ ,        │ .        │
              &kp Q      &kp J      &kp V      &kp D      &kp K          &kp X      &kp H     &kp SE_SLSH &kp COMMA &kp DOT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &lt NAV ESC &kp SPACE     &kp BSPC   &htl SYM ENTER
+                                             &htl NAV ESC &kp SPACE    &kp BSPC   &htl SYM ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -73,7 +73,7 @@
             &kp TAB    &none       &none      &none     &kp C_VOL_UP   &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ SHIFT    │ CTRL     │ ALT      │ META     │ VOL DWN  │   │ PG DWN   │ LEFT     │ DOWN     │ RIGHT    │          │
-            &kp LSHIFT &kp LCTRL  &kp LALT   &kp LGUI  &kp C_VOL_DN   &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &none
+            &kp LSHIFT &kp LCTRL  &kp LALT   &kp LGUI   &kp C_VOL_DN   &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │          │ Prev     │ P/Paus   │ Next     │   │          │          │          │          │          │
            &caps_word  &none      &kp C_PREV &kp C_PP   &kp C_NEXT     &none      &none      &none      &none     &none
@@ -88,7 +88,7 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
             &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //├──────────┼──────────┼──────────┼──────────┼──── ─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
