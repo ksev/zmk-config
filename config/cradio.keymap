@@ -98,7 +98,8 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ <        │ [        │  {       │  (       │ ~        │   │  ^       │  )       │  }       │  ]       │  >       │
-            &kp SE_LABK &kp SE_LBRC &kp SE_LCBR &kp SE_LPRN &kp SE_TILD &kp SE_CIRC &kp SE_RPRN &kp SE_RCBR &kp SE_RBRC &kp SE_RAKB
+        //    &kp SE_LABK &kp SE_LBRC &kp SE_LCBR &kp SE_LPRN &kp SE_TILD &kp SE_CIRC &kp SE_RPRN &kp SE_RCBR &kp SE_RBRC &kp SE_RAKB
+            &none &none &none &none &none &none &none &none &none &none
         //├──────────┼──────────┼──────────┼──────────┼──── ─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
