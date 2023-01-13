@@ -51,7 +51,7 @@
         //│  Q       │  J       │  V       │  D       │  K       │   │  X       │  H       │ /        │ ,        │ .        │
              &kp Q      &kp J      &kp V      &kp D      &kp K          &kp X      &kp H     &kp SE_SLSH &kp COMMA &kp DOT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &lht NAV ESC &kp SPACE  &kp BSPC   &lt SYM ENTER
+                                             &lt NAV ESC &kp SPACE     &kp BSPC   &lt SYM ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
