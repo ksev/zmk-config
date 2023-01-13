@@ -100,11 +100,11 @@
         //│ <        │ [        │  {       │  (       │ ~        │   │  ^       │  )       │  }       │  ]       │  >       │
             &kp SE_LABK &kp SE_LBRC &kp SE_LCBR &kp SE_LPRN &kp SE_TILD &kp SE_CIRC &kp SE_RPRN &kp SE_RCBR &kp SE_RBRC &kp SE_RABK
         //├──────────┼──────────┼──────────┼──────────┼──── ─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│ +        │  -       │  *       │  =       │ :        │   │  ;       │  META    │  ALT     │  CTRL    │  SHIFT   │
+            &kp SE_PLUS &kp SE_MINS &kp SE_ASTR &kp SE_EQL &kp SE_COLN  &kp SE_SCLN &kp LGUI &kp LALT &kp LCTRL &KP LSHIFT                                                                                                            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //│ |        │ _        │ @        │ `        │ $        │   │ #        │  \       │  &       │  ?       │ !        │
+            &kp SE_PIPE &kp SE_UNDS &kp SE_AT &kp SE_GRV &kp SE_DLR    &kp SE_HASH &kp SE_BSLS &kp SE_AMPR &kp SE_QUES &kp SE_EXLM
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
