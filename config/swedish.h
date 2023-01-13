@@ -14,7 +14,7 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-// #define SE_SECT KC_GRV  // §
+#define SE_SECT GRAVE // §
 #define SE_1    N1    // 1
 #define SE_2    N2    // 2
 #define SE_3    N3    // 3
