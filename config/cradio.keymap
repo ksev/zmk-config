@@ -15,6 +15,10 @@
 #define SYM 2
 #define NUM 3
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SE_OE SE_AO SE_AE>;
+};
+
 / {
     behaviors {
         ht: hold_tap {
@@ -69,8 +73,8 @@
         nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ TAB      │          │          │          │ VOL UP   │   │ PG UP    │ HOME     │ UP       │ END      │ DEL      │
-            &kp TAB    &none       &none      &none     &kp C_VOL_UP   &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp DEL
+        //│ TAB      │ ALT TAB  │          │          │ VOL UP   │   │ PG UP    │ HOME     │ UP       │ END      │ DEL      │
+            &kp TAB    &kp RA(TAB) &none     &none     &kp C_VOL_UP   &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ SHIFT    │ CTRL     │ ALT      │ META     │ VOL DWN  │   │ PG DWN   │ LEFT     │ DOWN     │ RIGHT    │          │
             &kp LSHIFT &kp LCTRL  &kp LALT   &kp LGUI   &kp C_VOL_DN   &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &none
