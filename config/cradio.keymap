@@ -46,7 +46,7 @@
             label = "Quot key";
             #binding-cells = <0>;
             bindings = <&kp SE_QUOT>, <&kp SE_DQUO>;
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
