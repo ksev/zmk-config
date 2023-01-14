@@ -41,7 +41,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "Quot key";
             #binding-cells = <0>;
-            bindings = <&kp SE_QUOT>, <&kp SE_DQUO>;
+            bindings = <&kp SE_DQUO>, <&kp SE_QUOT>;
             mods = <(MOD_LSFT)>;
         };
     };
