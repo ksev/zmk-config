@@ -10,6 +10,7 @@
 #define NAV 1
 #define SYM 2
 #define NUM 3
+#define GAM 4
 
 / {
     behaviors {
@@ -78,8 +79,8 @@
         //│ SHIFT    │ CTRL     │ META     │ TAB      │ PASTE    │   │ PG DWN   │ LEFT     │ DOWN     │ RIGHT    │ DEL      │
             &sk LSHIFT &sk LCTRL  &kp LGUI   &kp TAB    &kp LC(V)      &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │ Copy     │   │          │          │ Prev     │ Play     │ Next     │
-            &none      &none      &none      &none      &kp LC(C)     &none      &none       &kp C_PREV &kp C_PP   &kp C_NEXT
+        //│ Game     │          │          │          │ Copy     │   │          │          │ Prev     │ Play     │ Next     │
+            &tog GAM   &none      &none      &none      &kp LC(C)     &none      &none       &kp C_PREV &kp C_PP   &kp C_NEXT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -116,6 +117,23 @@
             &kp F1     &kp F2     &kp F3    &kp F4      &kp F5         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        gaming_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ ESC      │ Q        │ W        │ E        │ R        │   │ T        │ Y        │          │          │          │
+            &kp ESC    &kp Q      &kp W      &kp E      &kp R          &kp T      &kp Y      &none      &none      &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ SHIFT    │ A        │ S        │ D        │ F        │   │          │          │          │          │          │
+            &kp LSHIFT &kp A      &kp S      &kp D      &kp F          &none      &none      &none      &none      &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ TAB      │ Z        │ X        │ C        │ V        │   │          │          │          │          │          │
+            &kp TAB    &kp Z      &kp X      &kp C      &kp V          &none      &none      &none      &none      &tog GAM
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &kp LCTRL  &kp SPACE      &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
