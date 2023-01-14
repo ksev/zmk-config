@@ -76,8 +76,8 @@
         nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ TAB      │          │ Close    │ FlyP     │ CUT      │   │ PG UP    │ HOME     │ UP       │ END      │ DEL      │
-            &kp TAB    &none      &kp LA(F4) &kp LC(SPACE) &kp LC(X)   &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp DEL
+        //│ TAB      │ ATAB     │ Close    │ FlyP     │ CUT      │   │ PG UP    │ HOME     │ UP       │ END      │ DEL      │
+            &kp TAB    &kp LA(TAB) &kp LA(F4) &kp LC(SPACE) &kp LC(X)   &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ SHIFT    │ CTRL     │ META     │          │ PASTE    │   │ PG DWN   │ LEFT     │ DOWN     │ RIGHT    │          │
             &sk LSHIFT &sk LCTRL  &kp LGUI   &none      &kp LC(V)      &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &none
