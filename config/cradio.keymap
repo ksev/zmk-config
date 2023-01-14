@@ -32,8 +32,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <-1>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = -1;
             global-quick-tap;
             bindings = <&mo>, <&kp>;
         };
@@ -96,8 +96,8 @@
         //│ <        │ [        │  {       │  (       │ ~        │   │  ^       │  )       │  }       │  ]       │  >       │
             &kp SE_LABK &kp SE_LBRC &kp SE_LCBR &kp SE_LPRN &kp SE_TILD &kp SE_CIRC &kp SE_RPRN &kp SE_RCBR &kp SE_RBRC &kp SE_RABK
         //├──────────┼──────────┼──────────┼──────────┼──── ─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ +        │  -       │  *       │  %       │ ;        │   │  :       │ =        │ META     │  CTRL    │  SHIFT   │
-            &kp SE_PLUS &kp SE_MINS &kp SE_ASTR &kp SE_PERC &kp SE_SCLN  &kp SE_COLN &kp SE_EQL &kp LGUI    &sk LCTRL  &sk LSHIFT                                                                                                            
+        //│ %        │  -       │  *       │  +       │ ;        │   │  :       │ =        │ META     │  CTRL    │  SHIFT   │
+            &kp SE_PERC &kp SE_MINS &kp SE_ASTR &kp SE_PLUS &kp SE_SCLN  &kp SE_COLN &kp SE_EQL &kp LGUI    &sk LCTRL  &sk LSHIFT                                                                                                            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ |        │ _        │ @        │ `        │ $        │   │ #        │  \       │  &       │  ?       │ !        │
             &kp SE_PIPE &kp SE_UNDS &kp SE_AT &kp SE_GRV &kp SE_DLR    &kp SE_HASH &kp SE_BSLS &kp SE_AMPR &kp SE_QUES &kp SE_EXLM
