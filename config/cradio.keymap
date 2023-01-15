@@ -81,7 +81,7 @@
             &sk LSHIFT &sk LCTRL  &kp LGUI   &kp TAB    &kp LC(V)      &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ Game     │          │          │          │ Copy     │   │          │          │ Prev     │ Play     │ Next     │
-            &tog GAM   &none      &none      &none      &kp LC(C)     &none      &none       &kp C_PREV &kp C_PP   &kp C_NEXT
+            &tog GAM   &caps_word &none      &none      &kp LC(C)     &none      &none       &kp C_PREV &kp C_PP   &kp C_NEXT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -95,7 +95,7 @@
             &kp SE_LABK &kp SE_LBRC &kp SE_LCBR &kp SE_LPRN &kp SE_TILD &kp SE_CIRC &kp SE_RPRN &kp SE_RCBR &kp SE_RBRC &kp SE_RABK
         //├──────────┼──────────┼──────────┼──────────┼──── ─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ %        │  -       │  *       │  +       │ ;        │   │  :       │ =        │ META     │  CTRL    │  SHIFT   │
-            &kp SE_PERC &kp SE_MINS &kp SE_ASTR &kp SE_PLUS &kp SE_SCLN  &kp SE_COLN &kp SE_EQL &kp LGUI    &sk LCTRL  &sk LSHIFT                                                                                                            
+            &kp SE_PERC &kp SE_MINS &kp SE_ASTR &kp SE_PLUS &kp SE_SCLN &kp SE_COLN &kp SE_EQL &kp LGUI  &sk LCTRL  &sk LSHIFT                                                                                                            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ |        │ _        │ @        │ `        │ $        │   │ #        │  \       │  &       │  ?       │ !        │
             &kp SE_PIPE &kp SE_UNDS &kp SE_AT &kp SE_GRV &kp SE_DLR    &kp SE_HASH &kp SE_BSLS &kp SE_AMPR &kp SE_QUES &kp SE_EXLM
@@ -126,15 +126,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ ESC      │ Q        │ W        │ E        │ R        │   │ T        │ Y        │          │          │          │
-            &htl GAM2 ESC &kp Q   &kp W      &kp E      &kp R          &kp T      &kp Y      &none      &none      &none
+            &htl GAM2 ESC &kp Q   &kp W      &kp E      &kp R          &kp T      &kp Y      &kp N1     &kp N2     &kp N3
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ SHIFT    │ A        │ S        │ D        │ F        │   │          │          │          │          │          │
-            &kp LSHIFT &kp A      &kp S      &kp D      &kp F          &none      &none      &none      &none      &none
+        //│ SHIFT    │ A        │ S        │ D        │ F        │   │ I        │ L        │          │          │          │
+            &kp LSHIFT &kp A      &kp S      &kp D      &kp F          &kp I      &kp L      &kp N4     &kp N5     &kp N6
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ TAB      │ Z        │ X        │ C        │ V        │   │          │          │          │          │          │
-            &kp TAB    &kp Z      &kp X      &kp C      &kp V          &none      &none      &none      &none      &none
+        //│ TAB      │ Z        │ X        │ C        │ V        │   │ J        │ M        │          │          │          │
+            &kp TAB    &kp Z      &kp X      &kp C      &kp V          &kp J      &kp M      &kp N7     &kp N8      &kp N9
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LCTRL  &kp SPACE      &tog GAM   &tog GAM
+                                             &kp LCTRL  &kp SPACE      &tog GAM   &kp N0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
