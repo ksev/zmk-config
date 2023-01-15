@@ -13,6 +13,10 @@
 #define GAM 4
 #define GAM2 5
 
+&caps_word {
+    continue-list = <SE_UNDS BACKSPACE DELETE SE_AO SE_AE SE_OE>;
+};
+
 / {
     behaviors {
         ht: hold_tap {
@@ -81,7 +85,7 @@
             &sk LSHIFT &sk LCTRL  &kp LGUI   &kp TAB    &kp LC(V)      &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ Game     │          │          │          │ Copy     │   │          │          │ Prev     │ Play     │ Next     │
-            &tog GAM   &caps_word &none      &none      &kp LC(C)     &none      &none       &kp C_PREV &kp C_PP   &kp C_NEXT
+            &tog GAM   &none      &none      &caps_word &kp LC(C)     &none      &none       &kp C_PREV &kp C_PP   &kp C_NEXT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -132,7 +136,7 @@
             &kp LSHIFT &kp A      &kp S      &kp D      &kp F          &kp I      &kp L      &kp N4     &kp N5     &kp N6
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ TAB      │ Z        │ X        │ C        │ V        │   │ J        │ M        │          │          │          │
-            &kp TAB    &kp Z      &kp X      &kp C      &kp V          &kp J      &kp M      &kp N7     &kp N8      &kp N9
+            &kp TAB    &kp Z      &kp X      &kp C      &kp V          &kp J      &kp M      &kp N7     &kp N8     &kp N9
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp LCTRL  &kp SPACE      &tog GAM   &kp N0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
