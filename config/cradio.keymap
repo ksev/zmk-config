@@ -43,7 +43,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "Quot key";
             #binding-cells = <0>;
-            bindings = <&kp SE_DQUO>, <&kp SE_QUOT>;
+            bindings = <&kp SE_QUOT>, <&kp SE_DQUO>;
             mods = <(MOD_LSFT)>;
         };
     };
@@ -101,8 +101,8 @@
         //│ %        │  -       │  *       │  +       │ ;        │   │  :       │ =        │ META     │  CTRL    │  SHIFT   │
             &kp SE_PERC &kp SE_MINS &kp SE_ASTR &kp SE_PLUS &kp SE_SCLN &kp SE_COLN &kp SE_EQL &kp LGUI  &sk LCTRL  &sk LSHIFT                                                                                                            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ |        │ _        │ @        │ `        │ $        │   │ #        │  \       │  &       │  ?       │ !        │
-            &kp SE_PIPE &kp SE_UNDS &kp SE_AT &kp SE_GRV &kp SE_DLR    &kp SE_HASH &kp SE_BSLS &kp SE_AMPR &kp SE_QUES &kp SE_EXLM
+        //│ |        │ _        │ @        │ `        │ $        │   │ #        │ &        │ \        │  ?       │ !        │
+            &kp SE_PIPE &kp SE_UNDS &kp SE_AT &kp SE_GRV &kp SE_DLR    &kp SE_HASH &kp SE_AMPR &kp SE_BSLS &kp SE_QUES &kp SE_EXLM
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
