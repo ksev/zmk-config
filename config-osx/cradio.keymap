@@ -1,0 +1,163 @@
+// Copyright (c) 2022 The ZMK Contributors
+// SPDX-License-Identifier: MIT
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#include "swedish.h"
+
+#define NAV 1
+#define SYM 2
+#define NUM 3
+#define GAM 4
+#define GAM2 5
+
+&caps_word {
+    continue-list = <SE_UNDS BACKSPACE DELETE SE_AO SE_AE SE_OE>;
+};
+
+/ {
+    behaviors {
+        ht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+        htl: hold_tap_layer {
+            label = "hold_tap_layer";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <300>;
+            // quick-tap-ms = -1;
+            global-quick-tap;
+            bindings = <&mo>, <&kp>;
+        };
+        qout: progq {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Quot key";
+            #binding-cells = <0>;
+            bindings = <&kp SE_QUOT>, <&kp SE_DQUO>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NAV SYM>;
+            then-layer = <NUM>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+        default_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  W       │  L       │  Y       │  P       │  B       │   │  Z       │  F       │  O       │  U       │ '        │
+             &kp W      &kp L      &kp Y     &kp P       &kp B          &kp Z      &kp F      &ht SE_OE O &kp U    &qout
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  C       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ A        │
+             &kp C      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &ht SE_AE E &kp I    &ht SE_AO A
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Q       │  J       │  V       │  D       │  K       │   │  X       │  H       │ /        │ ,        │ .        │
+             &kp Q      &kp J      &kp V      &kp D      &kp K          &kp X      &kp H     &kp SE_SLSH &kp COMMA &kp DOT
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &htl NAV ESC &kp SPACE    &kp BSPC   &htl SYM ENTER
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │ FlyP     │ CUT      │   │ PG UP    │ HOME     │ UP       │ END      │          │
+            &none      &none      &none      &kp LC(SPACE) &kp LC(X)   &kp PG_UP  &kp HOME   &kp UP     &kp END    &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ SHIFT    │ CTRL     │ META     │ TAB      │ PASTE    │   │ PG DWN   │ LEFT     │ DOWN     │ RIGHT    │ DEL      │
+            &sk LSHIFT &sk LCTRL  &kp LGUI   &kp TAB    &kp LC(V)      &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ Game     │          │          │          │ Copy     │   │          │          │ Prev     │ Play     │ Next     │
+            &tog GAM   &none      &none      &caps_word &kp LC(C)     &none      &none       &kp C_PREV &kp C_PP   &kp C_NEXT
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        symbol_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ <        │ [        │  {       │  (       │ ~        │   │  ^       │  )       │  }       │  ]       │  >       │
+            &kp SE_LABK &kp SE_LBRC &kp SE_LCBR &kp SE_LPRN &kp SE_TILD &kp SE_CIRC &kp SE_RPRN &kp SE_RCBR &kp SE_RBRC &kp SE_RABK
+        //├──────────┼──────────┼──────────┼──────────┼──── ─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ %        │  -       │  *       │  +       │ :        │   │  ;       │ =        │ META     │  CTRL    │  SHIFT   │
+            &kp SE_PERC &kp SE_MINS &kp SE_ASTR &kp SE_PLUS &kp SE_COLN &kp SE_SCLN &kp SE_EQL &kp LGUI  &sk LCTRL  &sk LSHIFT                                                                                                            
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ |        │ _        │ @        │ `        │ $        │   │ #        │ &        │ \        │  ?       │ !        │
+            &kp SE_PIPE &kp SE_UNDS &kp SE_AT &kp SE_GRV &kp SE_DLR    &kp SE_HASH &kp SE_AMPR &kp SE_BSLS &kp SE_QUES &kp SE_EXLM
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        number_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ 1        │ 2        │ 3        │ 4        │ 5        │   │ 6        │ 7        │ 8        │ 9        │ 0        │
+            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ SHIFT    │ CTRL     │ META     │          │ F11      │   │ F12      │          │ META     │ CTRL     │ SHIFT    │
+            &sk LSHIFT &sk LCTRL  &kp LGUI   &none      &kp F11        &kp F12    &none      &kp LGUI   &sk LCTRL  &sk LSHIFT
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ F1       │ F2       │ F3       │ F4       │ F5       │   │ F6       │ F7       │ F8       │ F9       │ F10      │
+            &kp F1     &kp F2     &kp F3    &kp F4      &kp F5         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        gaming_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ ESC      │ Q        │ W        │ E        │ R        │   │ T        │ Y        │          │          │          │
+            &htl GAM2 ESC &kp Q   &kp W      &kp E      &kp R          &kp T      &kp Y      &kp N1     &kp N2     &kp N3
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ SHIFT    │ A        │ S        │ D        │ F        │   │ I        │ L        │          │          │          │
+            &kp LSHIFT &kp A      &kp S      &kp D      &kp F          &kp I      &kp L      &kp N4     &kp N5     &kp N6
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ TAB      │ Z        │ X        │ C        │ V        │   │ J        │ M        │          │          │          │
+            &kp TAB    &kp Z      &kp X      &kp C      &kp V          &kp J      &kp M      &kp N7     &kp N8     &kp N9
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &kp LCTRL  &kp SPACE      &tog GAM   &kp N0
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        gaming_layer_cont {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │ 1        │ 2        │ 3        │ 4        │   │          │          │          │          │          │
+            &trans     &kp N1     &kp N2     &kp N3     &kp N4         &reset     &none      &bootloader &none      &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &bt BT_CLR
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &none      &none          &none      &none
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+     };
+};
