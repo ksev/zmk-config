@@ -4,8 +4,9 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
   build-osx:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    env:
-      extra_cmake_args: -DMAC
-    with:
-      archive_name: 'firmware-osx'
+    steps: 
+    - uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+      env:
+        extra_cmake_args: -DMAC
+      with:
+        archive_name: 'firmware-osx'
