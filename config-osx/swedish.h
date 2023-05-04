@@ -54,7 +54,7 @@
 #define SE_AE   SQT  // Ä
 #define SE_QUOT NUHS // '
 // Row 4
-#define SE_LABK NUBS // <
+#define SE_LABK GRAVE // <
 #define SE_Z    Z    // Z
 #define SE_X    X    // X
 #define SE_C    C    // C
