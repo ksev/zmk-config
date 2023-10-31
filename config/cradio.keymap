@@ -60,15 +60,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  W       │  L       │  Y       │  P       │  B       │   │  Z       │  F       │  O       │  U       │ '        │
-             &kp W      &kp L      &kp Y     &kp P       &kp B          &kp Z      &kp F      &ht SE_OE O &kp U    &qout
+             &kp W      &kp L      &kp Y     &kp P       &kp B          &kp Z      &kp F      &kp O      &kp U    &qout
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  C       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ A        │
-             &kp C      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &ht SE_AE E &kp I    &ht SE_AO A
+             &kp C      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I     &kp A
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Q       │  J       │  V       │  D       │  K       │   │  X       │  H       │ /        │ ,        │ .        │
              &kp Q      &kp J      &kp V      &kp D      &kp K          &kp X      &kp H     &kp SE_SLSH &kp COMMA &kp DOT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &htl NAV ESC &kp SPACE    &kp BSPC   &htl SYM ENTER
+                                             &htl NAV ESC &ht LSHIFT SPACE    &kp BSPC   &htl SYM ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -77,10 +77,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │ FlyP     │ CUT      │   │ PG UP    │ HOME     │ UP       │ END      │          │
-            &none      &none      &none      &kp LC(SPACE) &kp LC(X)   &kp PG_UP  &kp HOME   &kp UP     &kp END    &none
+            &kp SE_AO  &kp SE_AE  &kp SE_OE  &kp LC(SPACE) &kp LC(X)   &kp PG_UP  &kp HOME   &kp UP     &kp END    &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ SHIFT    │ CTRL     │ META     │ TAB      │ PASTE    │   │ PG DWN   │ LEFT     │ DOWN     │ RIGHT    │ DEL      │
-            &sk LSHIFT &sk LCTRL  &kp LGUI   &kp TAB    &kp LC(V)      &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL
+            &kp LSHIFT &kp LCTRL  &kp LGUI   &kp TAB    &kp LC(V)      &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ Game     │          │          │          │ Copy     │   │          │          │ Prev     │ Play     │ Next     │
             &tog GAM   &none      &none      &caps_word &kp LC(C)     &none      &none       &kp C_PREV &kp C_PP   &kp C_NEXT
