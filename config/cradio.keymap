@@ -76,7 +76,7 @@
         nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │ FlyP     │ CUT      │   │ PG UP    │ HOME     │ UP       │ END      │          │
+        //│ Å        │ Ä        │ Ö        │ FlyP     │ CUT      │   │ PG UP    │ HOME     │ UP       │ END      │          │
             &kp SE_AO  &kp SE_AE  &kp SE_OE  &kp LC(SPACE) &kp LC(X)   &kp PG_UP  &kp HOME   &kp UP     &kp END    &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ SHIFT    │ CTRL     │ META     │ TAB      │ PASTE    │   │ PG DWN   │ LEFT     │ DOWN     │ RIGHT    │ DEL      │
@@ -97,7 +97,7 @@
             &kp SE_LABK &kp SE_LBRC &kp SE_LCBR &kp SE_LPRN &kp SE_TILD &kp SE_CIRC &kp SE_RPRN &kp SE_RCBR &kp SE_RBRC &kp SE_RABK
         //├──────────┼──────────┼──────────┼──────────┼──── ─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ %        │  -       │  *       │  +       │ :        │   │  ;       │ =        │ META     │  CTRL    │  SHIFT   │
-            &kp SE_PERC &kp SE_MINS &kp SE_ASTR &kp SE_PLUS &kp SE_COLN &kp SE_SCLN &kp SE_EQL &kp LGUI  &sk LCTRL  &sk LSHIFT                                                                                                            
+            &kp SE_PERC &kp SE_MINS &kp SE_ASTR &kp SE_PLUS &kp SE_COLN &kp SE_SCLN &kp SE_EQL &kp LGUI  &kp LCTRL  &kp LSHIFT                                                                                                            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ |        │ _        │ @        │ `        │ $        │   │ #        │ &        │ \        │  ?       │ !        │
             &kp SE_PIPE &kp SE_UNDS &kp SE_AT &kp SE_GRV &kp SE_DLR    &kp SE_HASH &kp SE_AMPR &kp SE_BSLS &kp SE_QUES &kp SE_EXLM
@@ -114,7 +114,7 @@
             &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ SHIFT    │ CTRL     │ META     │          │ F11      │   │ F12      │          │ META     │ CTRL     │ SHIFT    │
-            &sk LSHIFT &sk LCTRL  &kp LGUI   &none      &kp F11        &kp F12    &none      &kp LGUI   &sk LCTRL  &sk LSHIFT
+            &kp LSHIFT &kp LCTRL  &kp LGUI   &none      &kp F11        &kp F12    &none      &kp LGUI   &kp LCTRL  &kp LSHIFT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ F1       │ F2       │ F3       │ F4       │ F5       │   │ F6       │ F7       │ F8       │ F9       │ F10      │
             &kp F1     &kp F2     &kp F3    &kp F4      &kp F5         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10

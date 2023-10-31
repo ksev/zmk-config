@@ -60,15 +60,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  W       │  L       │  Y       │  P       │  B       │   │  Z       │  F       │  O       │  U       │ '        │
-             &kp W      &kp L      &kp Y     &kp P       &kp B          &kp Z      &kp F      &ht SE_OE O &kp U    &qout
+             &kp W      &kp L      &kp Y     &kp P       &kp B          &kp Z      &kp F      &kp O      &kp U    &qout
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  C       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ A        │
-             &kp C      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &ht SE_AE E &kp I    &ht SE_AO A
+             &kp C      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I     &kp A
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Q       │  J       │  V       │  D       │  K       │   │  X       │  H       │ /        │ ,        │ .        │
              &kp Q      &kp J      &kp V      &kp D      &kp K          &kp X      &kp H     &kp SE_SLSH &kp COMMA &kp DOT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &htl NAV ESC &kp SPACE    &kp BSPC   &htl SYM ENTER
+                                             &htl NAV ESC &ht LSHIFT SPACE    &kp BSPC   &htl SYM ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -76,11 +76,11 @@
         nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │ FlyP     │ CUT      │   │ PG UP    │ HOME     │ UP       │ END      │          │
-            &none      &none      &none      &kp LG(SPACE) &kp LG(X)   &kp PG_UP  &kp HOME   &kp UP     &kp END    &none
+        //│ Å        │ Ä        │ Ö        │ FlyP     │ CUT      │   │ PG UP    │ HOME     │ UP       │ END      │          │
+            &kp SE_AO  &kp SE_AE  &kp SE_OE  &kp LG(SPACE) &kp LG(X)   &kp PG_UP  &kp HOME   &kp UP     &kp END    &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ SHIFT    │ META     │ CTRL     │ TAB      │ PASTE    │   │ PG DWN   │ LEFT     │ DOWN     │ RIGHT    │ DEL      │
-            &sk LSHIFT &sk LGUI  &kp LCTRL   &kp TAB    &kp LG(V)      &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL
+            &kp LSHIFT &kp LGUI  &kp LCTRL   &kp TAB    &kp LG(V)      &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ Game     │          │          │          │ Copy     │   │          │          │ Prev     │ Play     │ Next     │
             &tog GAM   &none      &none      &caps_word &kp LG(C)     &none      &none       &kp C_PREV &kp C_PP   &kp C_NEXT
@@ -97,7 +97,7 @@
             &kp SE_LABK &kp SE_LBRC &kp SE_LCBR &kp SE_LPRN &kp SE_TILD &kp SE_CIRC &kp SE_RPRN &kp SE_RCBR &kp SE_RBRC &kp SE_RABK
         //├──────────┼──────────┼──────────┼──────────┼──── ─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ %        │  -       │  *       │  +       │ :        │   │  ;       │ =        │ CTRL     │ META     │  SHIFT   │
-            &kp SE_PERC &kp SE_MINS &kp SE_ASTR &kp SE_PLUS &kp SE_COLN &kp SE_SCLN &kp SE_EQL &kp LCTRL &sk LGUI  &sk LSHIFT                                                                                                            
+            &kp SE_PERC &kp SE_MINS &kp SE_ASTR &kp SE_PLUS &kp SE_COLN &kp SE_SCLN &kp SE_EQL &kp LCTRL &kp LGUI  &kp LSHIFT                                                                                                            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ |        │ _        │ @        │ `        │ $        │   │ #        │ &        │ \        │  ?       │ !        │
             &kp SE_PIPE &kp SE_UNDS &kp SE_AT &kp SE_GRV &kp SE_DLR    &kp SE_HASH &kp SE_AMPR &kp SE_BSLS &kp SE_QUES &kp SE_EXLM
@@ -114,7 +114,7 @@
             &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ SHIFT    │ META     │ CTRL     │          │ F11      │   │ F12      │          │ CTRL     │ META     │ SHIFT    │
-            &sk LSHIFT &sk LGUI  &kp LCTRL   &none      &kp F11        &kp F12    &none      &kp LCTRL  &sk LGUI   &sk LSHIFT
+            &kp LSHIFT &kp LGUI  &kp LCTRL   &none      &kp F11        &kp F12    &none      &kp LCTRL  &kp LGUI   &kp LSHIFT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ F1       │ F2       │ F3       │ F4       │ F5       │   │ F6       │ F7       │ F8       │ F9       │ F10      │
             &kp F1     &kp F2     &kp F3    &kp F4      &kp F5         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
