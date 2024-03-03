@@ -3,8 +3,9 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-  build-osx:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      archive_name: 'firmware-osx'
-      config_path: 'config-osx'
+#    
+#  build-osx:
+#    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+#    with:
+#      archive_name: 'firmware-osx'
+#      config_path: 'config-osx'
