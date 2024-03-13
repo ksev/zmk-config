@@ -37,7 +37,7 @@
             global-quick-tap;
             bindings = <&mo>, <&kp>;
         };
-        httl: hold_tap_layer {
+        httl: hold_tap_preferred_layer {
             label = "hold_tap_preferred_layer";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
