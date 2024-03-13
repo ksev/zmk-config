@@ -38,7 +38,7 @@
             bindings = <&mo>, <&kp>;
         };
         httl: hold_tap_layer {
-            label = "hold_tap_layer";
+            label = "hold_tap_preferred_layer";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
