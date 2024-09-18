@@ -45,6 +45,7 @@
             tapping-term-ms = <300>;
             // quick-tap-ms = -1;
             global-quick-tap;
+            retro-tap;
             bindings = <&mo>, <&kp>;
         };
         qout: progq {
