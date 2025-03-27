@@ -106,7 +106,7 @@
             &kp SE_LABK &kp SE_LBRC &kp SE_LCBR &kp SE_LPRN &kp SE_TILD &kp SE_CIRC &kp SE_RPRN &kp SE_RCBR &kp SE_RBRC &kp SE_RABK
         //├──────────┼──────────┼──────────┼──────────┼──── ─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ %        │  -       │  *       │  +       │ :        │   │  ;       │ =        │ META     │  CTRL    │  SHIFT   │
-            &kp SE_PERC &kp SE_MINS &kp SE_ASTR &kp SE_PLUS &kp SE_COLN &kp SE_SCLN &kp SE_EQL &kp LGUI  &kp LCTRL  &kp LSHIFT                                                                                                            
+            &kp SE_PERC &kp SE_MINS &kp SE_ASTR &kp SE_PLUS &kp SE_COLN &kp SE_SCLN &kp SE_EQL &kp LGUI  &kp LCTRL  &kp LSHIFT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ |        │ _        │ @        │ `        │ $        │   │ #        │ &        │ \        │  ?       │ !        │
             &kp SE_PIPE &kp SE_UNDS &kp SE_AT &kp SE_GRV &kp SE_DLR    &kp SE_HASH &kp SE_AMPR &kp SE_BSLS &kp SE_QUES &kp SE_EXLM
@@ -136,16 +136,16 @@
         gaming_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ ESC      │ Q        │ W        │ E        │ R        │   │ T        │ Y        │          │          │          │
-            &httl GAM2 ESC &kp Q   &kp W      &kp E      &kp R          &kp T      &kp Y      &kp N1     &kp N2     &kp N3
+        //│ TAB      │ Q        │ W        │ E        │ R        │   │ 4        │ 3        │ 2        │ 1        │ ESC      │
+            &kp TAB    &kp Q      &kp W      &kp E      &kp R          &kp N4     &kp N3     &kp N2     &kp N1     &kp ESC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ SHIFT    │ A        │ S        │ D        │ F        │   │ I        │ L        │          │          │          │
-            &kp LSHIFT &kp A      &kp S      &kp D      &kp F          &kp I      &kp L      &kp N4     &kp N5     &kp N6
+        //│ SHIFT    │ A        │ S        │ D        │ F        │   │ M        │ N        │ L        │ I        │ G        │
+            &kp LSHIFT &kp A      &kp S      &kp D      &kp F          &kp M      &kp N      &kp L     &kp I       &kp G
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ TAB      │ Z        │ X        │ C        │ V        │   │ J        │ M        │          │          │          │
-            &kp TAB    &kp Z      &kp X      &kp C      &kp V          &kp J      &kp M      &kp N7     &kp N8     &kp N9
+        //│ LALT      │ Z        │ X        │ C        │ V       │   │ FPS LIM  │ HUD PRE  │ J        │ Y        │ T        │
+            &kp LALT    &kp Z      &kp X      &kp C      &kp V         &kp LS(F1) &kp RS(F10) &kp J      &kp Y      &kp T
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LCTRL  &kp SPACE      &tog GAM   &kp ENTER
+                                             &kp LCTRL  &kp SPACE      &tog GAM   &httl GAM2 ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -154,15 +154,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │ 1        │ 2        │ 3        │ 4        │   │          │          │          │          │          │
-            &trans     &kp N1     &kp N2     &kp N3     &kp N4         &none      &kp F1     &kp F2     &kp F3     &kp F4
+            &none      &kp N1     &kp N2     &kp N3     &kp N4         &kp F12      &kp F11      &kp F10    &kp F9      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &kp N5     &kp N6    &kp N7      &kp N8         &none      &kp F5     &kp F6     &kp F7     &kp F8
+            &none      &kp N5     &kp N6    &kp N7      &kp N8         &kp F8     &kp F7     &kp F6     &kp F5      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &bt BT_CLR_ALL &none  &none      &none      &none          &none      &kp F9     &kp F10    &kp F11    &kp F12
+            &none      &kp N9     &kp N0     &none      &none          &kp F4     &kp F3     &kp F2     &kp F1     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LALT   &none          &none      &none
+                                             &bt BT_CLR_ALL &none      &none      &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
